@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+*-install/
+*-source/
+*-build/
+build/
+.idea/
+*.zip
+*.tar.*
+cmake-build-debug/
