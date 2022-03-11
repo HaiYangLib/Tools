@@ -1,10 +1,10 @@
-CXX_TAG=gcc
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
+#CXX_TAG=gcc
+#export CC=/usr/bin/gcc
+#export CXX=/usr/bin/g++
 
-# CXX_TAG=c8
-# export CC=/usr/bin/clang-8
-# export CXX=/usr/bin/clang++-8
+CXX_TAG=c8
+export CC=/usr/bin/clang-8
+export CXX=/usr/bin/clang++-8
 
 VERSION=v2.2.0
 BASENAME=gflags-${VERSION}-${CXX_TAG}

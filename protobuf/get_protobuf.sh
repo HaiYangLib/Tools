@@ -1,20 +1,20 @@
-CXX_TAG=gcc
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
+#CXX_TAG=gcc
+#export CC=/usr/bin/gcc
+#export CXX=/usr/bin/g++
 
-# CXX_TAG=c8
-# export CC=/usr/bin/clang-8
-# export CXX=/usr/bin/clang++-8
+CXX_TAG=c8
+export CC=/usr/bin/clang-8
+export CXX=/usr/bin/clang++-8
 
 VERSION=v3.18.1 # 版本
 BASENAME=protobuf-${VERSION}-${CXX_TAG}
 
 RM_SOURCE="false" # 是否删除源码
-RM_BUILD="true"  # 是否删除build文件夹
+RM_BUILD="true"   # 是否删除build文件夹
 INSTALL="true"    # 是否编译及安装
 
 SOURCE_DIR=${BASENAME}-source   # 源代码文件夹
-BUILD_DIR=${BASENAME}-build    # build文件夹
+BUILD_DIR=${BASENAME}-build     # build文件夹
 INSTALL_DIR=${BASENAME}-install # 安装文件夹
 
 if [ -d "${INSTALL_DIR}" ]; then

@@ -1,15 +1,18 @@
-CXX_TAG=gcc
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
+# 需要先安装eigen和osqp
 
-# CXX_TAG=c8
-# export CC=/usr/bin/clang-8
-# export CXX=/usr/bin/clang++-8
-VERSION=v0.6.4 # 版本
+#CXX_TAG=gcc
+#export CC=/usr/bin/gcc
+#export CXX=/usr/bin/g++
+
+CXX_TAG=c8
+export CC=/usr/bin/clang-8
+export CXX=/usr/bin/clang++-8
+
+VERSION=v0.7.0 # 版本
 BASENAME=osqp_eigen-${VERSION}-${CXX_TAG}
 
 RM_SOURCE="false" # 是否删除源码
-RM_BUILD="true"  # 是否删除build文件夹
+RM_BUILD="true"   # 是否删除build文件夹
 INSTALL="true"    # 是否编译及安装
 
 SOURCE_DIR=${BASENAME}-source   # 源代码文件夹
@@ -26,7 +29,7 @@ else
   else
     echo "============= Retrieving Osqp. ================"
     git clone --depth=1 -b ${VERSION} \
-        https://github.com/robotology/osqp-eigen.git ${SOURCE_DIR}
+      https://github.com/robotology/osqp-eigen.git ${SOURCE_DIR}
   fi
 
   if [ "${INSTALL}" == "true" ]; then

@@ -1,16 +1,16 @@
-CXX_TAG=gcc
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
+#CXX_TAG=gcc
+#export CC=/usr/bin/gcc
+#export CXX=/usr/bin/g++
 
-# CXX_TAG=c8
-# export CC=/usr/bin/clang-8
-# export CXX=/usr/bin/clang++-8
+CXX_TAG=c8
+export CC=/usr/bin/clang-8
+export CXX=/usr/bin/clang++-8
 
 VERSION=v0.3.5 # 版本
 BASENAME=glog-${VERSION}-${CXX_TAG}
 
 RM_SOURCE="false" # 是否删除源码
-RM_BUILD="true"  # 是否删除build文件夹
+RM_BUILD="true"   # 是否删除build文件夹
 INSTALL="true"    # 是否编译及安装
 
 SOURCE_DIR=${BASENAME}-source   # 源代码文件夹
@@ -27,7 +27,7 @@ else
   else
     echo "============= Retrieving Glog. ================"
     git clone --depth=1 -b ${VERSION} \
-        https://github.com/google/glog.git ${SOURCE_DIR}
+      https://github.com/google/glog.git ${SOURCE_DIR}
   fi
 
   if [ "${INSTALL}" == "true" ]; then
